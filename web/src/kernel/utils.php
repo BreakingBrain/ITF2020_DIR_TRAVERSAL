@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+// ITF{D1R_TR@V3RSAL}
+
 defined('ALLOWED_IMG_MIMETYPES') || define('ALLOWED_IMG_MIMETYPES', [
     'image/jpeg',
     'image/jpg'

@@ -8,7 +8,10 @@ if (!isset($_POST['file'])) {
     exit;
 }
 
+
 $fileName = STORAGE_DIR.$_POST['file'];
+$fileName = str_replace('/', '', $fileName);
+$fileName = str_replace('..', '', $fileName);
 
 if (!file_exists($fileName)) {
     http_response_code(404);

@@ -46,6 +46,7 @@ declare(strict_types=1);
         </form>
     </div>
     <div class="success">
+        <!-- download to /uploads dir -->
         <form action="/download" method="post">
             <input name="file" type="text">
             <button>Download</button>

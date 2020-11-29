@@ -9,9 +9,16 @@ function upload() {
         throw new \Exception(sprintf('File mime type is not supported. Allowed types: %s', implode(', ', ALLOWED_IMG_MIMETYPES)));
     }
 
-    $fileName = md5(random_bytes(16));
+    $fileName = $_FILES['file']['name'];
+    $names = explode('.', $fileName);
+    if (count($names) > 1) {
+        $fileName = "{$names[0]}.{$names[1]}";
+    } else {
+        $fileName = "{$names[0]}.jpg";
+    }
 
     rename($_FILES['file']['tmp_name'], STORAGE_DIR.$fileName);
+
     return $fileName;
 }
 

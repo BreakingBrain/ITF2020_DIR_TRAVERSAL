@@ -40,13 +40,13 @@ declare(strict_types=1);
 <body style="background: black; color: green">
 <div>
     <div class="success">
+        <!-- upload to /uploads dir -->
         <form enctype="multipart/form-data" action="/upload" method="post">
             <input name="file" type="file">
             <button>Upload</button>
         </form>
     </div>
     <div class="success">
-        <!-- download to /uploads dir -->
         <form action="/download" method="post">
             <input name="file" type="text">
             <button>Download</button>
